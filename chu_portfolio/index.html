@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<meta name="description" content="Video editor portfolio">
+
+<!--
+  ============================================================
+  NOTE FOR THE SITE OWNER:
+  This file only contains structure. Your name, bio, projects,
+  skills, services, and social links are NOT hard-coded here —
+  they live in config.js and are injected by script.js when the
+  page loads. To personalize the site, edit config.js only.
+  ============================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= FILM STRIP / SPROCKET DIVIDER (decorative, reused) ================= -->
+<template id="sprocket-strip-template">
+  <div class="sprocket-strip" aria-hidden="true"></div>
+</template>
+
+<!-- ================= HEADER / NAV ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#top" class="logo" id="logoMark">--</a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="timecode" id="timecodeDisplay" aria-hidden="true">
+      <span class="rec-dot"></span>
+      <span id="timecodeValue">00:00:00:00</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero-strip sprocket-strip" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow" id="heroEyebrow">// now playing</p>
+      <h1 class="hero-name" id="heroName">Your Name</h1>
+      <p class="hero-title" id="heroTitle">Professional Title</p>
+      <p class="hero-bio" id="heroBio">Short bio goes here.</p>
+
+      <div class="hero-actions">
+        <a href="#work" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        <a href="#" id="resumeLink" class="btn btn-link" target="_blank" rel="noopener">Resume ↗</a>
+      </div>
+    </div>
+    <div class="hero-strip sprocket-strip" aria-hidden="true"></div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats-strip" id="statsStrip" aria-label="Career stats"></section>
+
+  <!-- ================= WORK / PORTFOLIO ================= -->
+  <section class="section" id="work">
+    <div class="section-inner">
+      <p class="section-eyebrow">// selected work</p>
+      <h2 class="section-title">Recent Cuts</h2>
+      <div class="filmstrip-gallery" id="projectGallery"></div>
+    </div>
+  </section>
+
+  <div class="sprocket-strip" aria-hidden="true"></div>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section" id="skills">
+    <div class="section-inner two-col">
+      <div>
+        <p class="section-eyebrow">// levels</p>
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-list" id="skillsList"></div>
+      </div>
+      <div>
+        <p class="section-eyebrow">// kit</p>
+        <h2 class="section-title">Tools &amp; Software</h2>
+        <div class="tools-tags" id="toolsList"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket-strip" aria-hidden="true"></div>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="section-inner">
+      <p class="section-eyebrow">// shot list</p>
+      <h2 class="section-title">Services</h2>
+      <div class="services-list" id="servicesList"></div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact-section" id="contact">
+    <div class="section-inner two-col">
+      <div class="contact-info">
+        <p class="section-eyebrow">// recording</p>
+        <h2 class="section-title">Let's Make Something</h2>
+        <p class="contact-lead">Have a project in mind? Send the details and I'll get back to you within a couple of days.</p>
+
+        <ul class="contact-details" id="contactDetails"></ul>
+
+        <div class="social-row" id="socialRow" aria-label="Social media links"></div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="rec-indicator"><span class="rec-dot"></span> REC</div>
+
+        <label class="field">
+          <span>Name</span>
+          <input type="text" name="name" id="fieldName" required autocomplete="name">
+          <span class="field-error" id="errorName"></span>
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" id="fieldEmail" required autocomplete="email">
+          <span class="field-error" id="errorEmail"></span>
+        </label>
+
+        <label class="field">
+          <span>Project Type</span>
+          <select name="projectType" id="fieldProjectType" required></select>
+          <span class="field-error" id="errorProjectType"></span>
+        </label>
+
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" id="fieldMessage" rows="5" required></textarea>
+          <span class="field-error" id="errorMessage"></span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="#top" class="logo" id="footerLogo">--</a>
+    <div class="social-row" id="footerSocialRow" aria-label="Social media links"></div>
+    <p class="footer-copy" id="footerCopy"></p>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
