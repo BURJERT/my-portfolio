@@ -77,30 +77,30 @@ const CONFIG = {
       link: "#"
     },
     {
-      title: "Night Signals // Music Video",
-      category: "Music Video",
-      description: "Performance and narrative intercut for an independent artist's debut single, graded for a neon-noir look.",
-      image: "https://placehold.co/640x360/17181B/3DDC97?text=Project+02",
-      tools: ["Premiere Pro", "DaVinci Resolve"],
-      duration: "03:42",
+      title: "School Project // Shorty Story",
+      category: "Graphic Edit",
+      description: "A 90-second brand story for an outdoor apparel launch, cut for pace and built around a single tracking shot.",
+      image: "https://placehold.co/640x360/17181B/FF6A3D?text=Project+01",
+      tools: ["Capcut Pro"],
+      duration: "06:30",
       link: "#"
     },
     {
-      title: "Founders // Documentary Series",
-      category: "Documentary",
-      description: "Episode two of a four-part interview series profiling early-stage founders, edited from 14 hours of raw footage.",
-      image: "https://placehold.co/640x360/17181B/8A8D93?text=Project+03",
-      tools: ["Premiere Pro", "Audition"],
-      duration: "08:15",
+      title: "School Project // Shorty Story",
+      category: "Graphic Edit",
+      description: "A 90-second brand story for an outdoor apparel launch, cut for pace and built around a single tracking shot.",
+      image: "https://placehold.co/640x360/17181B/FF6A3D?text=Project+01",
+      tools: ["Capcut Pro"],
+      duration: "06:30",
       link: "#"
     },
     {
-      title: "Launch Day // Social Campaign",
-      category: "Social / Ads",
-      description: "A set of six vertical cutdowns for a product launch, optimized for the first three seconds of scroll.",
-      image: "https://placehold.co/640x360/17181B/FF6A3D?text=Project+04",
-      tools: ["Premiere Pro", "After Effects"],
-      duration: "00:15",
+      title: "School Project // Shorty Story",
+      category: "Graphic Edit",
+      description: "A 90-second brand story for an outdoor apparel launch, cut for pace and built around a single tracking shot.",
+      image: "https://placehold.co/640x360/17181B/FF6A3D?text=Project+01",
+      tools: ["Capcut Pro"],
+      duration: "06:30",
       link: "#"
     }
   ],
